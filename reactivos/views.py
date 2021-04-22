@@ -20,7 +20,7 @@ class Window(QMainWindow):
         """Inicializador."""
         super().__init__(parent)
         self.setWindowTitle("Calculadora de reactivo limitante")
-        self.resize(550, 250)
+        self.resize(700, 350)
         self.centralWidget = QWidget()
         self.setCentralWidget(self.centralWidget)
         self.layout = QHBoxLayout()
@@ -35,12 +35,14 @@ class Window(QMainWindow):
         self.table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.table.resizeColumnsToContents()
         # Crea los botones
-        self.addButton = QPushButton("Agregar")
+        self.addButton1 = QPushButton("Agregar ecuación")
+        self.addButton2 = QPushButton("Agregar elemento químico")
         self.deleteButton = QPushButton("Borrar")
         self.clearAllButton = QPushButton("Limpiar")
         # Lay out the GUI
         layout = QVBoxLayout()
-        layout.addWidget(self.addButton)
+        layout.addWidget(self.addButton1)
+        layout.addWidget(self.addButton2)
         layout.addWidget(self.deleteButton)
         layout.addStretch()
         layout.addWidget(self.clearAllButton)
