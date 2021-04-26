@@ -3,3 +3,4 @@
 """Este módulo general el paquete reactivos."""
 
 __version__ = "0.1.0"
+__author__='Nahuel Bustos'
