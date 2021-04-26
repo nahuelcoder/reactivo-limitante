@@ -15,7 +15,7 @@ def main():
     # Crea la aplicación
     app = QApplication(sys.argv)
 
-    # Crea la ventana principal si la conexión fue exitosa
+    # Crea la ventana principal
     win = Window()
     win.show()
 
