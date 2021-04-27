@@ -48,6 +48,7 @@ class Window(QMainWindow):
         self.display.setFixedHeight(35)
         self.display.setAlignment(Qt.AlignRight)
         self.display.setReadOnly(True)
+        # comentario random
 
         # Agrega el display al layout general
         self.generalLayout.addWidget(self.display)
