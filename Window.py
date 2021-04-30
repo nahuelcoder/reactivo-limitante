@@ -13,23 +13,5 @@ class Window(QMainWindow, Ui_MainWindow):
         super().__init__(parent)
         self.setupUi(self)
 
-        reactivos = []
-        productos = []
-
-        """ print('reactivos lista')
-        print(reactivos) """
-
-        self.calcular.clicked.connect(lambda: self.MostrarResultado(reactivos))
-
-
-    def MostrarResultado(self, compuestos=None):
-
-        if compuestos is None:
-            compuestos = []
-
-        compuestos.append(Compuesto(self.reac1Formula.text(), self.reac1Coef.text(), self.reac1Moles.text()))
-        texto = compuestos[0].formula
-        self.resultado.setText(compuestos[0].formula)
-        print(texto)
 
     

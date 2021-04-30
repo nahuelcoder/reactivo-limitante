@@ -47,7 +47,7 @@
      <string>Calcular</string>
     </property>
    </widget>
-   <widget class="QLabel" name="ecuacionFinal">
+   <widget class="QLabel" name="recordatorio">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -84,70 +84,36 @@
      <string/>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QLabel" name="reactivos_ingresados">
     <property name="geometry">
      <rect>
-      <x>11</x>
-      <y>71</y>
-      <width>604</width>
-      <height>213</height>
+      <x>40</x>
+      <y>120</y>
+      <width>300</width>
+      <height>40</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout_3">
-     <item row="0" column="0" rowspan="3">
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="2" column="2">
-        <widget class="QLineEdit" name="reac3Moles">
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="placeholderText">
-          <string>moles</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLineEdit" name="reac3Coef">
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="placeholderText">
-          <string>coeficiente</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QLineEdit" name="reac1Moles">
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="placeholderText">
-          <string>moles</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="reac2Formula">
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="placeholderText">
-          <string>reactivo</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="reac1Formula">
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="placeholderText">
-          <string>reactivo</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLineEdit" name="reac2Coef">
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>200</y>
+      <width>593</width>
+      <height>77</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLineEdit" name="reac_coeficiente">
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
@@ -156,18 +122,8 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="2">
-        <widget class="QLineEdit" name="reac2Moles">
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="placeholderText">
-          <string>moles</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="reac3Formula">
+       <item>
+        <widget class="QLineEdit" name="reac_formula">
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
@@ -176,132 +132,55 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="0" alignment="Qt::AlignHCenter">
-        <widget class="QLineEdit" name="reac1Coef">
+       <item>
+        <widget class="QLineEdit" name="reac_moles">
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>moles</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="agregar_reactivo">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="text">
-          <string/>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="placeholderText">
-          <string>coeficiente</string>
+          <string>Agregar</string>
          </property>
         </widget>
        </item>
       </layout>
      </item>
-     <item row="0" column="1">
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="0" column="2">
-      <widget class="QCheckBox" name="agregarReac1">
-       <property name="text">
-        <string>Agregar</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <spacer name="horizontalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="1" column="2">
-      <widget class="QCheckBox" name="agregarReac2">
-       <property name="text">
-        <string>Agregar</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <spacer name="horizontalSpacer_3">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="2" column="2">
-      <widget class="QCheckBox" name="agregarReac3">
-       <property name="text">
-        <string>Agregar</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
+     <item>
       <widget class="Line" name="line">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
      </item>
-     <item row="4" column="0" rowspan="3">
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="prod2Formula">
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="placeholderText">
-          <string>producto</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QLineEdit" name="prod3Moles">
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="placeholderText">
-          <string>moles</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="prod1Formula">
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="placeholderText">
-          <string>producto</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QLineEdit" name="prod2Moles">
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="placeholderText">
-          <string>moles</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLineEdit" name="prod2Coef">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLineEdit" name="prod_coeficiente">
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
@@ -310,18 +189,8 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="2">
-        <widget class="QLineEdit" name="prod1Moles">
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="placeholderText">
-          <string>moles</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="prod3Formula">
+       <item>
+        <widget class="QLineEdit" name="prod_formula">
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
@@ -330,85 +199,109 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="0">
-        <widget class="QLineEdit" name="prod1Coef">
+       <item>
+        <widget class="QLineEdit" name="prod_moles">
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
          <property name="placeholderText">
-          <string>coeficiente</string>
+          <string>moles</string>
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
-        <widget class="QLineEdit" name="prod3Coef">
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
-         <property name="placeholderText">
-          <string>coeficiente</string>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="agregar_producto">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Agregar</string>
          </property>
         </widget>
        </item>
       </layout>
      </item>
-     <item row="4" column="1">
-      <spacer name="horizontalSpacer_4">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="4" column="2">
-      <widget class="QCheckBox" name="agregarProd1">
+    </layout>
+   </widget>
+   <widget class="QLabel" name="productos_ingresados">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>120</y>
+      <width>300</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="es_igual">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>130</y>
+      <width>68</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>=&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>70</y>
+      <width>478</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="etiqueta_reactivos">
        <property name="text">
-        <string>Agregar</string>
+        <string>Reactivos ingresados</string>
        </property>
       </widget>
      </item>
-     <item row="5" column="1">
-      <spacer name="horizontalSpacer_5">
+     <item>
+      <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>40</width>
+         <width>168</width>
          <height>20</height>
         </size>
        </property>
       </spacer>
      </item>
-     <item row="5" column="2">
-      <widget class="QCheckBox" name="agregarProd2">
+     <item>
+      <widget class="QLabel" name="etiqueta_productos">
        <property name="text">
-        <string>Agregar</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="1">
-      <spacer name="horizontalSpacer_6">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="6" column="2">
-      <widget class="QCheckBox" name="agregarProd3">
-       <property name="text">
-        <string>Agregar</string>
+        <string>Productos ingresados</string>
        </property>
       </widget>
      </item>
@@ -457,24 +350,11 @@
   </action>
  </widget>
  <tabstops>
-  <tabstop>reac1Coef</tabstop>
-  <tabstop>reac1Formula</tabstop>
-  <tabstop>reac1Moles</tabstop>
-  <tabstop>reac2Coef</tabstop>
-  <tabstop>reac2Formula</tabstop>
-  <tabstop>reac2Moles</tabstop>
-  <tabstop>reac3Coef</tabstop>
-  <tabstop>reac3Formula</tabstop>
-  <tabstop>reac3Moles</tabstop>
-  <tabstop>prod1Coef</tabstop>
-  <tabstop>prod1Formula</tabstop>
-  <tabstop>prod1Moles</tabstop>
-  <tabstop>prod2Coef</tabstop>
-  <tabstop>prod2Formula</tabstop>
-  <tabstop>prod2Moles</tabstop>
-  <tabstop>prod3Coef</tabstop>
-  <tabstop>prod3Formula</tabstop>
-  <tabstop>prod3Moles</tabstop>
+  <tabstop>reac_coeficiente</tabstop>
+  <tabstop>reac_formula</tabstop>
+  <tabstop>prod_coeficiente</tabstop>
+  <tabstop>prod_formula</tabstop>
+  <tabstop>prod_moles</tabstop>
   <tabstop>calcular</tabstop>
  </tabstops>
  <resources/>
