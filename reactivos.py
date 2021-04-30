@@ -15,11 +15,13 @@ win = Window()
 reactivos = []
 productos = []
 
+win.actionLimpiar.triggered.connect(lambda: limpiar_todo(reactivos, productos))
+
 win.agregar_reactivo.clicked.connect(lambda: agregar_reac(reactivos))
 
 win.agregar_producto.clicked.connect(lambda: agregar_prod(productos))
 
-win.calcular.clicked.connect(lambda: MostrarResultado(reactivos))
+win.calcular.clicked.connect(lambda: MostrarResultado(calcular_resultado(reactivos)))
 
 
 def agregar_reac(lista_reactivos):
@@ -59,10 +61,34 @@ def generar_texto(lista_compuestos):
     return texto
 
 
-def MostrarResultado(compuestos):
+def calcular_resultado(reactivos):
+    menor = 100000000
+    for reactivo in reactivos:
+        aux = reactivo.moles / reactivo.coeficiente
+        if aux < menor:
+            menor = aux
+            limitante = reactivo.formula
+    return limitante
 
-    print(len(compuestos))
+
+def MostrarResultado(resultado):
+
+    win.resultado.setText(f'El reactivo limitante es: {resultado}')
     
+
+def limpiar_todo(reactivos, productos):
+    win.reac_coeficiente.clear()
+    win.reac_formula.clear()
+    win.reac_moles.clear()
+    win.prod_coeficiente.clear()
+    win.prod_formula.clear()
+    win.prod_moles.clear()
+    win.reactivos_ingresados.setText('')
+    win.productos_ingresados.setText('')
+    win.resultado.setText('')
+    reactivos.clear()
+    productos.clear()
+
 
 if __name__ == "__main__":
     

@@ -80,6 +80,12 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <kerning>true</kerning>
+     </font>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -352,9 +358,12 @@
  <tabstops>
   <tabstop>reac_coeficiente</tabstop>
   <tabstop>reac_formula</tabstop>
+  <tabstop>reac_moles</tabstop>
+  <tabstop>agregar_reactivo</tabstop>
   <tabstop>prod_coeficiente</tabstop>
   <tabstop>prod_formula</tabstop>
   <tabstop>prod_moles</tabstop>
+  <tabstop>agregar_producto</tabstop>
   <tabstop>calcular</tabstop>
  </tabstops>
  <resources/>

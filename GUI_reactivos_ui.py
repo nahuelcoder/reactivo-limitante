@@ -38,6 +38,10 @@ class Ui_MainWindow(object):
         self.recordatorio.setObjectName("recordatorio")
         self.resultado = QtWidgets.QLabel(self.centralwidget)
         self.resultado.setGeometry(QtCore.QRect(40, 310, 411, 41))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        font.setKerning(True)
+        self.resultado.setFont(font)
         self.resultado.setText("")
         self.resultado.setObjectName("resultado")
         self.reactivos_ingresados = QtWidgets.QLabel(self.centralwidget)
@@ -148,10 +152,13 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.reac_coeficiente, self.reac_formula)
-        MainWindow.setTabOrder(self.reac_formula, self.prod_coeficiente)
+        MainWindow.setTabOrder(self.reac_formula, self.reac_moles)
+        MainWindow.setTabOrder(self.reac_moles, self.agregar_reactivo)
+        MainWindow.setTabOrder(self.agregar_reactivo, self.prod_coeficiente)
         MainWindow.setTabOrder(self.prod_coeficiente, self.prod_formula)
         MainWindow.setTabOrder(self.prod_formula, self.prod_moles)
-        MainWindow.setTabOrder(self.prod_moles, self.calcular)
+        MainWindow.setTabOrder(self.prod_moles, self.agregar_producto)
+        MainWindow.setTabOrder(self.agregar_producto, self.calcular)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
