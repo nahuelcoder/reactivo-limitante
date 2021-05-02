@@ -50,7 +50,7 @@ class Ui_MainWindow(object):
         self.reactivos_ingresados = QtWidgets.QLabel(self.centralwidget)
         self.reactivos_ingresados.setGeometry(QtCore.QRect(40, 120, 300, 40))
         self.reactivos_ingresados.setText("")
-        self.reactivos_ingresados.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.reactivos_ingresados.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.reactivos_ingresados.setObjectName("reactivos_ingresados")
         self.layoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.layoutWidget.setGeometry(QtCore.QRect(80, 200, 593, 77))

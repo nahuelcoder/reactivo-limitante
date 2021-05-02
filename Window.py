@@ -3,9 +3,10 @@
 
 """Este módulo contiene la clase que crea la ventana"""
 
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow
+
+from PyQt5.QtWidgets import QMainWindow
 from GUI_reactivos_ui import Ui_MainWindow
+
 
 class Window(QMainWindow, Ui_MainWindow):
 
@@ -13,6 +14,3 @@ class Window(QMainWindow, Ui_MainWindow):
 
         super().__init__(parent)
         self.setupUi(self)
-
-
-    

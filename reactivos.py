@@ -5,8 +5,7 @@
 
 import sys
 
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QApplication
 from Compuesto import Compuesto
 from Window import Window
 
@@ -22,17 +21,19 @@ win.agregar_reactivo.clicked.connect(lambda: agregar_reac(reactivos))
 
 win.agregar_producto.clicked.connect(lambda: agregar_prod(productos))
 
-win.calcular.clicked.connect(lambda: MostrarResultado(calcular_resultado(reactivos)))
+win.calcular.clicked.connect(lambda: MostrarResultado(
+    calcular_resultado(reactivos)))
 
 
 def agregar_reac(lista_reactivos):
 
-    lista_reactivos.append(Compuesto(win.reac_formula.text(), int(win.reac_coeficiente.text()), int(win.reac_moles.text())))
+    lista_reactivos.append(Compuesto(win.reac_formula.text(), int(
+        win.reac_coeficiente.text()), int(win.reac_moles.text())))
 
     generar_texto(lista_reactivos)
 
     win.reactivos_ingresados.setText(generar_texto(lista_reactivos))
-    
+
     win.reac_coeficiente.clear()
     win.reac_formula.clear()
     win.reac_moles.clear()
@@ -40,12 +41,13 @@ def agregar_reac(lista_reactivos):
 
 def agregar_prod(lista_productos):
 
-    lista_productos.append(Compuesto(win.prod_formula.text(), int(win.prod_coeficiente.text()), int(win.prod_moles.text())))
+    lista_productos.append(Compuesto(win.prod_formula.text(), int(
+        win.prod_coeficiente.text()), int(win.prod_moles.text())))
 
     generar_texto(lista_productos)
 
     win.productos_ingresados.setText(generar_texto(lista_productos))
-    
+
     win.prod_coeficiente.clear()
     win.prod_formula.clear()
     win.prod_moles.clear()
@@ -75,7 +77,7 @@ def calcular_resultado(reactivos):
 def MostrarResultado(resultado):
 
     win.resultado.setText(f'El reactivo limitante es: {resultado}')
-    
+
 
 def limpiar_todo(reactivos, productos):
     win.reac_coeficiente.clear()
@@ -92,6 +94,6 @@ def limpiar_todo(reactivos, productos):
 
 
 if __name__ == "__main__":
-    
+
     win.show()
     sys.exit(app.exec())

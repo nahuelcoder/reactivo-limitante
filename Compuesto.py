@@ -3,8 +3,9 @@
 
 """Este módulo contiene la clase para crear compuestos"""
 
+
 class Compuesto:
-    
+
     # Constructor
 
     def __init__(self, formula, coeficiente, moles):
