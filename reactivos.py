@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""Este módulo contiene el punto de acceso a la aplicación."""
+"""Este módulo contiene la aplicación."""
+
 import sys
 
 from PyQt5 import QtCore, QtGui, QtWidgets
