@@ -30,6 +30,10 @@
   <property name="windowTitle">
    <string>Calculadora de reactivo limitante</string>
   </property>
+  <property name="windowIcon">
+   <iconset theme="Calculator">
+    <normaloff>../recursos/icon.png</normaloff>../recursos/icon.png</iconset>
+  </property>
   <property name="tabShape">
    <enum>QTabWidget::Rounded</enum>
   </property>

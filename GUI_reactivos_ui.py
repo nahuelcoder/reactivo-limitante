@@ -20,6 +20,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setKerning(True)
         MainWindow.setFont(font)
+        icon = QtGui.QIcon.fromTheme("Calculator")
+        MainWindow.setWindowIcon(icon)
         MainWindow.setTabShape(QtWidgets.QTabWidget.Rounded)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
