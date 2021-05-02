@@ -1,5 +1,5 @@
 # Calculadora de reactivo limitante
-Identifica el reactivo limitante en una ecuación química
+Identifica el reactivo limitante en una ecuación química.
 
 ## Utilización
 
