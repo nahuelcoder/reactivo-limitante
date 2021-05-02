@@ -5,7 +5,7 @@ Identifica el reactivo limitante en una ecuación química
 
 Se deben agregar los reactivos y productos que componen la reacción completando los campos *coeficiente*, *reactivo* (fórmula química del compuesto), *moles* (disponibilidad del compuesto) y presionando el botón **agregar**.
 
-![Captura-calculadora](recursos/Calculadora reactivo limitante.png)
+![Captura-calculadora](recursos/Calculadora-reactivo-limitante.png)
 
 Al presionar el botón **Calcular** se mostrará en la parte inferior un mensaje con el reactivo limitante de la reacción química.
 
@@ -23,6 +23,6 @@ Siendo **X** e **Y** reactivos, **Z** productos y *a*, *b* y *c*, sus respectivo
 
 Si
 
-![Cálculo-reactivo-limitante](recursos/Cálculo limitante.png)
+![Cálculo-reactivo-limitante](recursos/Cálculo-limitante.png)
 
 entonces **X** es el reactivo limitante.
