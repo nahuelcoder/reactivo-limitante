@@ -9,6 +9,8 @@ Se deben agregar los reactivos y productos que componen la reacción completando
 
 Al presionar el botón **Calcular** se mostrará en la parte inferior un mensaje con el reactivo limitante de la reacción química.
 
+![Captura-calculadora-resultado](recursos/Reactivo_resultado.png)
+
 ## Consideraciones
 
 Antes de ingresar los reactivos es necesario contar con la ecuación **correctamente balanceada**
